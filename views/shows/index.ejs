@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="/base.css" rel="stylesheet">
+    <link href="/index.css" rel="stylesheet">
+    <title>Show Catalogue</title>
+</head>
+<body>
+    <div class="container">
+        <div class="show-container">
+            <div class="logo-container">
+                <a href="/" class="logo"><h1>Show Catalogue</h1></a>
+                <a href="shows/new" class="btn">Create New Entry</a>
+            </div>
+            <div class="view-container">
+                <div class="list-group">
+                    <% if (shows && shows.length) { %> 
+                        <ul>
+                            <% shows.forEach(show => { %>
+                                <li><a class= "list-group-item" href="shows/<%= show.slug %>"><%= show.title %></a></li>
+                            <% }) %> 
+                        </ul>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

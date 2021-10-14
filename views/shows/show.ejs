@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="/base.css" rel="stylesheet">
+    <link href="/show.css" rel="stylesheet">
+    <title>Create Entry</title>
+</head>
+<body>
+    <div class="container">
+        <div class="show-container">
+            <div class="logo-container">
+                <img class="image" src="<%= show.image %>">
+                <a href="/" class="btn">← Return to Index</a>
+                <a href="/shows/edit/<%= show.id  %>" class=btn>Edit Entry</a>
+                <form action="/shows/<%= show.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn-del btn-danger">Delete</button>
+                </form>
+            </div>
+            <div class="view-container">
+                <div class="info-container">
+                    <div class="banner">
+                        <img src="<%= show.banner %>">
+                    </div>
+                    <div class="field-container">
+                        <div class="fields">
+                            <label class="data"><b>Title:</b> <%= show.title %></label>
+                            <label class="data"><b>Genres:</b> <%= show.genres %></label>
+                            <label class="data"><b>Studios:</b> <%= show.studios %></label>
+                            <label class="data"><b>Type:</b> <%= show.type %></label>
+                            <label class="data"><b>Status:</b> <%= show.status %></label>
+                            <label class="data"><b>Episodes:</b> <%= show.episodes %></label>
+                            <label class="data"><b>Duration:</b> <%= show.duration %> mins. per ep.</label>
+                            <label class="data"><b>Synopsis:</b></label>
+                        </div>
+                        <div class="synopsis">
+                            <p><%= show.synopsis %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

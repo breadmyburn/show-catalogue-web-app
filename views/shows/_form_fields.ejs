@@ -1,0 +1,80 @@
+<!-- Title -->
+<div class="form-group">
+    <label for="title">Title</label>
+    <input required value="<%= show.title %>" type="text" name="title" id="title" class="form-control form-control mb-3">
+</div>
+
+<div class="row">
+    <!-- Genres -->
+    <div class="col-md-6">
+        <label for="genres">Genres</label>
+    <input required value="<%= show.genres %>" type="text" name="genres" id="genres" class="form-control form-control mb-3">
+    </div>
+    <!-- Studios -->
+    <div class="col-md-6">
+        <label for="studios">Studios</label>
+    <input required value="<%= show.studios %>" type="text" name="studios" id="studios" class="form-control form-control mb-3">
+    </div>
+</div>
+
+<div class="row">
+    <!-- Type -->
+    <div class="col-md-4 mb-3">
+        <label for="type">Type</label>
+        <select required value="<%= show.type %>" name="type" class="form-select" aria-label="type">
+            <option selected value="">Select a Type</option>
+            <option value="TV">TV</option>
+            <option value="Movie">Movie</option>
+            <option value="OVA">OVA</option>
+            <option value="ONA">ONA</option>
+            <option value="Special">Special</option>
+        </select>
+    </div>
+    <!-- Status -->
+    <div class="col-md-4 mb-3">
+        <label for="status">Status</label>
+        <select required value="<%= show.status %>" name="status" class="form-select" aria-label="status">
+            <option selected value="">Select Status</option>
+            <option value="Not Yet Aired">Not Yet Aired</option>
+            <option value="Ongoing">Ongoing</option>
+            <option value="Completed">Completed</option>
+        </select>
+    </div>
+</div>
+<div class="row mb-3">
+    <!-- Episodes -->
+    <div class="col-md-3">
+        <label for="episodes">Episodes</label>
+        <input value="<%= show.episodes %>" type="number" name="episodes" id="episodes"class="form-control" min="0">
+    </div>
+    <!-- Duration -->
+    <div class="col-md-6">
+        <label for="duration">Duration</label>
+        <div class="input-group">
+            <input value="<%= show.duration %>" type="number" name="duration" id="duration" class="form-control" min="0">
+            <div class="input-group-append">
+                <span class="input-group-text" id="episodes">mins. per ep.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Image -->
+    <div class="col-md-6 mb-3">
+        <label for="image">Cover Image Link</label>
+        <input value="<%= show.image %>" type="text" name="image" id="image"class="form-control">
+    </div>
+    <!-- Banner -->
+    <div class="col-md-6 mb-3">
+        <label for="banner">Banner Image Link</label>
+        <input value="<%= show.banner %>" type="text" name="banner" id="banner" class="form-control">
+    </div>
+</div>
+<!-- Synopsis -->
+<div class="form-group">
+    <label for="synposis">Synopsis</label>
+    <textarea value="<%= show.synopsis %>" name="synopsis" id="synopsis" class="form-control mb-3"></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">Save</button>
+<a href="/" class="btn btn-secondary">Cancel</a>

@@ -1,0 +1,38 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-group {
+    height: 95%;
+    width: 90%;
+    overflow: auto;
+}
+
+.list-group-item {
+    background-color: #36393f;
+    color: white;
+    transition: background-color 200ms ease-in-out;
+}
+
+.list-group-item:hover {
+    background-color: #282b30;
+    color: white;
+}
+
+.btn {
+    cursor: pointer;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    border-radius: .25rem;
+    transition: background-color 200ms ease-in-out;
+    text-decoration: none;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #495faf;
+    color: whitesmoke;
+}
